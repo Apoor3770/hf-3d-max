@@ -4,13 +4,13 @@ import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import DrawerControls from './components/DrawerControls';
 import ModelViewer from './components/ModelViewer';
 import UploadModel from './components/UploadModel';
-import ModelDetailPage from './components/ModelDetailPage'; // Model detail page import
+import ModelDetailPage from './components/ModelDetailPage';
 
 function App() {
   const [models, setModels] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
   const [drawerOpen, setDrawerOpen] = useState(false);
-  const [showUpload, setShowUpload] = useState(false); // For showing the upload modal
+  const [showUpload, setShowUpload] = useState(false);
 
   useEffect(() => {
     axios.get('http://localhost:5000/models')
@@ -44,21 +44,13 @@ function App() {
         />
 
         {/* Landing Page Content */}
-        <div className="landing-page">
-          <div className="video-row">
-            <div className="video-wrapper">
-              <video src="/video1.mp4" autoPlay loop muted playsInline />
-            </div>
-            <div className="video-wrapper">
-              <video src="/video2.mp4" autoPlay loop muted playsInline />
-            </div>
-            <div className="video-wrapper">
-              <video src="/video3.mp4" autoPlay loop muted playsInline />
-            </div>
-          </div>
+        <div style={{ textAlign: 'center', marginTop: '80px' }}>
           <h2 style={{ fontFamily: 'Poppins', fontSize: '1.5rem', color: '#fff' }}>
             Welcome to HF-3D Max! Browse and view 3D models.
           </h2>
+          
+          {/* Video Section */}
+          
         </div>
 
         {/* Routes */}
@@ -83,7 +75,7 @@ function App() {
                   borderRadius: '4px',
                   cursor: 'pointer'
                 }}
-                onClick={() => setShowUpload(false)} // Close modal
+                onClick={() => setShowUpload(false)}  // Close modal
               >
                 Close
               </button>
