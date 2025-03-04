@@ -1,0 +1,256 @@
+/* Global reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Black background for the entire page */
+body {
+  font-family: 'Poppins', sans-serif; /* Modern, clean font */
+  background-color: #000; /* Black background */
+  color: #fff; /* White text */
+}
+
+/* Main container for the entire app */
+.app-container {
+  padding: 20px;
+  position: relative;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Translucent header ribbon */
+.header-ribbon {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.75); /* Translucent black */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  z-index: 1100;
+}
+
+/* Title in the center of the ribbon */
+.header-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+  color: #fff; /* White text */
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
+
+/* Drawer toggle button (left) */
+.drawer-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #fff; /* White text */
+  font-size: 1.5rem;
+}
+
+/* Upload button (right) */
+.upload-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #fff; /* White text */
+  font-size: 1.5rem;
+}
+
+/* Drawer styling with more padding */
+.drawer {
+  position: fixed;
+  top: 80px; /* Shifted content lower */
+  left: 0;
+  width: 260px;
+  height: 100%;
+  background: #111; /* Dark background */
+  padding: 40px 20px; /* Increased padding for a cleaner look */
+  z-index: 1000;
+  overflow-y: auto;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.drawer.open {
+  transform: translateX(0);
+}
+
+.drawer ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.drawer li {
+  background: #222;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.drawer li:hover {
+  background: #333;
+}
+
+.drawer-search {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.drawer-search input {
+  flex: 1;
+  border-radius: 5px;
+  border: 1px solid #00FF00;
+  padding: 8px;
+  background: #333;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Model container styling for centered model */
+.model-detail-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.model-box {
+  width: 80%; /* Takes up 80% of the screen width */
+  background: #222; /* Dark background */
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  color: #fff; /* White text */
+}
+
+.model-box h3 {
+  font-family: 'Poppins', sans-serif;
+}
+
+.model-box p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem;
+}
+
+/* Video row styling with rounded corners */
+.video-row {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin: 100px auto 20px;
+}
+
+.video-wrapper {
+  width: 300px;
+  aspect-ratio: 9 / 16;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0px 2px 8px rgba(0,0,0,0.2);
+}
+
+.video-wrapper video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Upload modal styling */
+.upload-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1200;
+}
+
+.upload-modal {
+  background: #111;
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Center the content inside the model detail page */
+.model-detail-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.model-box {
+  width: 80%;
+  background: #222;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  color: #fff;
+}
+
+/* Adjusting the modal overlay when showing */
+.upload-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1200;
+}
+
+/* Landing Page Section (for videos) */
+.landing-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.landing-page h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+/* Styles for the video section */
+.video-row {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin: 100px auto 20px;
+}
+
+.video-wrapper {
+  width: 300px;
+  aspect-ratio: 9 / 16;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0px 2px 8px rgba(0,0,0,0.2);
+}
+
+.video-wrapper video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
