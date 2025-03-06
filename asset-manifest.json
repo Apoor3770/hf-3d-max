@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/hf-3d-max/static/css/main.cc272bdc.css",
-    "main.js": "/hf-3d-max/static/js/main.096498e8.js",
+    "main.js": "/hf-3d-max/static/js/main.c9dbd1d2.js",
     "index.html": "/hf-3d-max/index.html",
     "main.cc272bdc.css.map": "/hf-3d-max/static/css/main.cc272bdc.css.map",
-    "main.096498e8.js.map": "/hf-3d-max/static/js/main.096498e8.js.map"
+    "main.c9dbd1d2.js.map": "/hf-3d-max/static/js/main.c9dbd1d2.js.map"
   },
   "entrypoints": [
     "static/css/main.cc272bdc.css",
-    "static/js/main.096498e8.js"
+    "static/js/main.c9dbd1d2.js"
   ]
 }
